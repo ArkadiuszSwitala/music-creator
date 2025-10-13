@@ -1,0 +1,21 @@
+.header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+
+  .content {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav {
+    &-list {
+      display: flex;
+
+      &-item {
+        margin-left: 15px;
+      }
+    }
+  }
+}
