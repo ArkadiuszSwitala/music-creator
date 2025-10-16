@@ -1,0 +1,94 @@
+.as {
+  &-container {
+    padding: 4px;
+    background: #434343;
+  }
+
+  &-player {
+    padding: 10px;
+    background: #262626;
+    color: #fafafa;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+
+    &-cover {
+      display: flex;
+      width: 300px;
+
+      &-image {
+        display: block;
+        width: 60px;
+        height: 60px;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        margin-right: 15px;
+      }
+
+      &-content {
+        &-artist {
+          font-size: 14px;
+          margin-bottom: 3px;
+        }
+
+        &-title {
+          font-size: 17px;
+          margin-bottom: 3px;
+        }
+
+        &-album {
+          font-size: 12px;
+        }
+      }
+    }
+
+    &-controls {
+      width: 230px;
+      display: flex;
+      padding-top: 5px;
+      justify-content: space-evenly;
+      cursor: pointer;
+
+      &-control {
+        color: #acacac;
+        transition: color .4s;
+
+        &:hover {
+          color: #ffffff;
+        }
+
+        .material-icons {
+          font-size: 43px;
+        }
+      }
+    }
+
+    &-display {
+      display: flex;
+      align-items: center;
+      padding: 0 30px;
+      color: #acacac;
+      width: calc(100% - 530px);
+
+      &-time {
+        padding: 0 20px;
+      }
+
+      &-timeline {
+        width: 100%;
+      }
+
+      &-volume {
+        padding-top: 5px;
+        cursor: pointer;
+        color: #acacac;
+        transition: color .4s;
+
+        &:hover {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}

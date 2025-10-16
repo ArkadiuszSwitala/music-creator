@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +11,8 @@ import { LatestComponent } from './latest/latest.component';
 import { LiveSessionComponent } from './live-session/live-session.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterPlayerComponent } from './footer-player/footer-player.component';
+import { AsPlayerComponent } from './components/as-player/as-player.component';
+import { AsPlayerTimelineComponent } from './components/as-player-timeline/as-player-timeline.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +24,16 @@ import { FooterPlayerComponent } from './footer-player/footer-player.component';
     LatestComponent,
     LiveSessionComponent,
     ContactComponent,
-    FooterPlayerComponent
+    FooterPlayerComponent,
+    AsPlayerComponent,
+    AsPlayerTimelineComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ],
   providers: [],
   bootstrap: [AppComponent]

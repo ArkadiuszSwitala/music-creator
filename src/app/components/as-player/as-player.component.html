@@ -1,0 +1,41 @@
+<div class="as-container">
+  <div class="as-player">
+    <div class="as-player-cover">
+      <div class="as-player-cover-image" [ngStyle]="{'background-image': 'url(' + currentSong.cover + ')'}"></div>
+      <div class="as-player-cover-content">
+        <div class="as-player-cover-content-artist">{{currentSong.artist}}</div>
+        <div class="as-player-cover-content-title">{{currentSong.title}}</div>
+        <div class="as-player-cover-content-album">{{currentSong.album}}</div>
+      </div>
+    </div>
+    <div class="as-player-controls">
+      <div class="as-player-controls-control as-player-controls-playlist">
+        <span class="material-icons">queue_music</span>
+      </div>
+      <div class="as-player-controls-control as-player-controls-prev" (click)="prevSong()">
+        <span class="material-icons">skip_previous</span>
+      </div>
+      <div class="as-player-controls-control as-player-controls-play" (click)="togglePlay()">
+        @if (playing) {
+          <span class="material-icons">pause</span>
+        } @else {
+          <span class="material-icons">play_arrow</span>
+        }
+      </div>
+      <div class="as-player-controls-control as-player-controls-next" (click)="nextSong()">
+        <span class="material-icons">skip_next</span>
+      </div>
+    </div>
+    <div class="as-player-display">
+      <div class="as-player-display-time .total-time">0:00</div>
+      <div class="as-player-display-timeline">
+        <app-as-player-timeline/>
+      </div>
+      <div class="as-player-display-time .total-time">3:23</div>
+      <div class="as-player-display-volume">
+        <span class="material-icons">volume_up</span>
+      </div>
+    </div>
+  </div>
+  <!--    https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API-->
+</div>
